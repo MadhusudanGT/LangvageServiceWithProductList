@@ -1,0 +1,41 @@
+<table>
+  <tr>
+    <td>
+      <span>
+        <img
+          class="image-container"
+          [src]="itemDetail.image"
+          alt="itemDetail.imageAlt"
+        />
+        <p>{{ itemDetail.name }}</p>
+      </span>
+    </td>
+
+    <td>{{ itemDetail.sellingPrice | currency: "INR":"symbol" }}</td>
+    <td>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <button mat-raised-button (click)="removeItem()" color="accent">
+              -
+            </button>
+          </div>
+          <div class="col">
+            {{ qty }}
+          </div>
+          <div class="col">
+            <button mat-raised-button (click)="addItem()" color="accent">
+              +
+            </button>
+          </div>
+        </div>
+      </div>
+    </td>
+    <td>
+      <button mat-raised-button routerLink="['/cart']" (click)="onRemove()">
+        Remove
+      </button>
+    </td>
+    <td>{{ total | currency: "INR":"symbol" }}</td>
+  </tr>
+</table>

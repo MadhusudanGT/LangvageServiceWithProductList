@@ -1,0 +1,26 @@
+<h1>Welcome to your Cart</h1>
+<div *ngIf="itemList.length === 0">Your Cart is Emtpy</div>
+<div *ngIf="itemList.length > 0">
+  <table>
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Price</th>
+        <th>QTY</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+  </table>
+  <ul>
+    <li *ngFor="let item of itemList">
+      <cart-item [itemDetail]="item"></cart-item>
+    </li>
+  </ul>
+</div>
+<div class="for-billing">
+  <button mat-raised-button color="accent" (click)="Billing()">Bill</button>
+
+  <h4>{{ totalBill | currency: "INR":"symbol" }}</h4>
+</div>
+
+<button (click)="onClick()">Refresh Cart</button>

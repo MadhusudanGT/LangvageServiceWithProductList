@@ -1,0 +1,42 @@
+<a [routerLink]="['cart']">
+  Goto Cart
+</a>
+
+<div class="sort">
+  <span
+    ><strong>Sort By </strong>
+
+    <mat-form-field>
+      <mat-label>Select an option</mat-label>
+      <mat-select [(value)]="selectedProperty">
+        <mat-option>None</mat-option>
+        <mat-option value="{{ dropDownOption.option1 }}"
+          >Price low to high</mat-option
+        >
+        <mat-option value="{{ dropDownOption.option2 }}"
+          >Price high to low</mat-option
+        >
+        <mat-option value="{{ dropDownOption.option3 }}"
+          >Alphabetically</mat-option
+        >
+      </mat-select>
+    </mat-form-field>
+  </span>
+  <button mat-raised-button (click)="sortOrder()">Sort</button>
+</div>
+<div class="container">
+  <div class="row">
+    <ng-container
+      *ngFor="let i = index; let product; of: products | paginate: config"
+    >
+      <div class="col s12 m4 l3">
+        <item-card [productItem]="product"></item-card>
+      </div>
+    </ng-container>
+
+    <pagination-controls
+      class="paginator"
+      (pageChange)="pageChanged($event)"
+    ></pagination-controls>
+  </div>
+</div>
