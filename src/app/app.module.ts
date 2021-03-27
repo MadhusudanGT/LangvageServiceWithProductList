@@ -17,6 +17,7 @@ import { CartComponent } from "./shopping-cart/cart/cart.component";
 import { CartItemComponent } from "./shopping-cart/cart/cart-item/cart-item.component";
 import { SortBy } from "./pipes/sort-by.pipe";
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,7 @@ import { SortBy } from "./pipes/sort-by.pipe";
     ItemCardComponent,
     CartComponent,
     CartItemComponent,
-    SortBy,
+    SortBy
   ],
   imports: [
     BrowserModule,
