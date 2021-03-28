@@ -6,7 +6,7 @@
   <span>My App</span>
   <span class="example-spacer"></span>
   <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-    <mat-icon>favorite</mat-icon>
+    <mat-icon [routerLink]="['dashboard']">favorite</mat-icon>
   </button>
   <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
     <span class="material-icons" [routerLink]="['']">
@@ -40,3 +40,19 @@
 </div>
 
 <button (click)="onClick()">Refresh Cart</button>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+</table>
+<ul>
+  <li *ngFor="let item of itemList">
+    {{item.name}}
+    {{item.sellingPrice}}
+  </li>
+</ul>

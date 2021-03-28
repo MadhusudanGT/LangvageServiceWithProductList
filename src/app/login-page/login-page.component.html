@@ -1,3 +1,29 @@
+<mat-toolbar>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>My App</span>
+  <span class="example-spacer"></span>
+  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon [routerLink]="['dashboard']">favorite</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <span class="material-icons" [routerLink]="['cart']">
+      add_shopping_cart
+      </span>
+  </button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <span class="material-icons" [routerLink]="['']">
+        home
+        </span>
+    </button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <span class="material-icons" [routerLink]="['langvage']">
+      L
+      </span>
+  </button>
+</mat-toolbar>
+<mat-divider></mat-divider>
 <div id="BG2">
   <div>
       <form #newUserForm="ngForm" (ngSubmit)="onSubmit(newUserForm)" class="center">
@@ -36,7 +62,7 @@
               <button  mat-raised-button color="primary" type="submit"  style="margin-left: 20px;width: 80%;">
                 LOGIN</button>
                 <mat-card-content style="text-align: center;margin: 20px;">
-                  <a>New To Libraray ? </a> <a routerLink="/" routerLinkActive="active">Create New Account</a>
+                  <a>New To Libraray ? </a> <a routerLink="/registration" routerLinkActive="active">Create New Account</a>
                </mat-card-content>
         </mat-card>
         </form>

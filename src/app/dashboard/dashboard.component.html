@@ -1,0 +1,34 @@
+<mat-toolbar>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <span class="material-icons" [routerLink]="['cart']">
+        add_shopping_cart
+        </span>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <span class="material-icons" [routerLink]="['']">
+          home
+          </span>
+      </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <span class="material-icons" [routerLink]="['langvage']">
+        L
+        </span>
+    </button>
+  </mat-toolbar>
+  <mat-divider></mat-divider>
+  <section>
+    <div class="example-button-row">
+      <button mat-raised-button (click)="login()">Login</button>
+      <button mat-raised-button color="primary" (click)="registration()">Register</button>
+    </div>
+  </section>
+  <mat-divider></mat-divider>
+<app-carousel></app-carousel>

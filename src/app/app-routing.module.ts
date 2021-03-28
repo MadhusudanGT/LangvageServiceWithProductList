@@ -7,13 +7,16 @@ import { ProductListComponent } from "./components/product-list/product-list.com
 import {CarouselComponent} from "./carousel/carousel.component";
 import {LoginPageComponent} from "./login-page/login-page.component";
 import {RegistrationPageComponent} from "./registration-page/registration-page.component";
+import {DashboardComponent} from "./dashboard/dashboard.component";
+
 const routes: Routes = [
   { path: "cart", component: CartComponent },
   { path: "", component: ProductListComponent },
   { path: "langvage", component: LangvageServiceComponent },
   {path:'carousel' , component:CarouselComponent},
   {path:'login',component:LoginPageComponent},
-{path:'registration',component:RegistrationPageComponent}
+{path:'registration',component:RegistrationPageComponent},
+{path:'dashboard',component:DashboardComponent}
 
 ];
 

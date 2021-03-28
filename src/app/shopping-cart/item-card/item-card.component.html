@@ -28,14 +28,14 @@
 
   <mat-card-actions class="card-button-container">
     <a href="#">
-      <mat-icon title="Add to Wishlist">favorite </mat-icon>
+      <mat-icon title="Add to Wishlist" [routerLink]="['dashboard']">favorite </mat-icon>
     </a>
 
     <a href="#">
       <mat-icon title="Description"> visibility</mat-icon>
     </a>
 
-    <button mat-raised-button color="primary" (click)="addToCart(productItem)">
+    <button mat-raised-button color="primary" (click)="addToCart(productItem)" >
       <mat-icon>shopping_cart</mat-icon>ADD TO CART
     </button>
   </mat-card-actions>

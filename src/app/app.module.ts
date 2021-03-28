@@ -22,6 +22,7 @@ import { NgImageSliderModule } from 'ng-image-slider';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { RegistrationPageComponent } from './registration-page/registration-page.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { RegistrationPageComponent } from './registration-page/registration-page
     CarouselComponent,
     LoginPageComponent,
     RegistrationPageComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,

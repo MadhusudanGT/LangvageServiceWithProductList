@@ -1,6 +1,7 @@
 import { Component, OnInit, AfterViewInit } from "@angular/core";
 import { ProductMessengerService } from "src/app/services/product-messenger.service";
 import { Product } from "src/app/models/product.model";
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: "cart",
@@ -10,7 +11,7 @@ import { Product } from "src/app/models/product.model";
 export class CartComponent implements OnInit {
   itemList = [];
   totalBill: number = 0;
-  constructor(private productMessengerService: ProductMessengerService) {}
+  constructor(private productMessengerService: ProductMessengerService,private _snackBar: MatSnackBar) {}
 
   ngOnInit(): void {
     console.log("clicked");
@@ -44,9 +45,21 @@ export class CartComponent implements OnInit {
     this.itemList.forEach(
       (item) => (this.totalBill += item.qty * item.sellingPrice)
     );
-    console.log(Math.round(this.totalBill * 100) / 100);
+    // console.log(Math.round(this.totalBill * 100) / 100);
+    console.log(this.itemList)
+    this.SuccessSnackBar()
   }
 
+  openSnackBar() {
+    this._snackBar.open('PLEASE FILL VALIDE DETAILS', "!!!!", {
+      duration: 5000,
+    });
+  }
+  SuccessSnackBar(){
+    this._snackBar.open('THANKS YOU FOR BUYING THE PRODUCT WAIT FOR OUR MESSAGE', ":))))", {
+      duration: 10000,
+    });
+  }
   onClick() {
     // console.log(this.itemList);
     this.ngOnInit();
